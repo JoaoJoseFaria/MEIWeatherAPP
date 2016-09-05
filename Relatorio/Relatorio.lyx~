@@ -1,0 +1,262 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass llncs
+\begin_preamble
+\usepackage{lipsum}
+\end_preamble
+\options runningheads
+\use_default_options true
+\maintain_unincluded_children false
+\language portuguese
+\language_package none
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Como está a praia hoje? (Parte I)
+\end_layout
+
+\begin_layout Author
+8836 - João José Neves Faria
+\begin_inset Newline newline
+\end_inset
+
+8839 - Hugo Ricardo Marques Lourenço
+\begin_inset Newline newline
+\end_inset
+
+9306 - Abdulay Mota do Nascimento Abreu
+\end_layout
+
+\begin_layout Institute
+IPCA - instituto Politécnico do Cavado e Ave
+\begin_inset Newline newline
+\end_inset
+
+Vila Frescaínha S.
+ Martinho
+\begin_inset Newline newline
+\end_inset
+
+4750-810 BARCELOS
+\end_layout
+
+\begin_layout Abstract
+Programação de Dispositivos Móveis e Multissensoriais - Trabalho prático
+ (1ª fase)
+\end_layout
+
+\begin_layout Abstract
+Este projecto será realizado no ãmbito do trabalho prático da cadeira de
+ programação de dispositivos móveis e multisensoriais.
+ Com ele pretendemos criar uma aplicação Android que forneça informações
+ úteis para a prática balnear.
+ Entre elas teremos acesso à previsão do tempo para as praias, assim como
+ outra informação relevante na hora da escolhe de uma praia.
+ Esta aplicação funcionará como um agragador de várias informações recolhidas
+ de vários serviços online.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+keywords{
+\end_layout
+
+\end_inset
+
+Praia, Tempo, Calor, Verão
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Introdução e objetivos
+\end_layout
+
+\begin_layout Standard
+Com este trabalho pretendemos desenvolver uma aplicação mobile que funcione
+ como um hub de informação útil para quem pretende ir à praia.
+ Na escolhe de uma praia há vários factores que influenciam a escolha.
+ Condicionantes como o tempo, a temperatura da água, as condições de acesso
+ à praia, as istalações circundantes, entre outros, condicionam a escolha.
+ Com esta aplicação pretendemos disponibilizar toda a informação relevante
+ em apenas um local.
+\end_layout
+
+\begin_layout Section
+Arquitetura da solução
+\end_layout
+
+\begin_layout Standard
+A solução desenvolvida baseia-se numa aplicação Android, que vai funcionar
+ como cliente de várias API de terceiros, aglumerando toda a informação
+ recebida, em apenas um local.
+\end_layout
+
+\begin_layout Subsection
+Principais decisões ao nível do design e interface gráfica
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum[1-4]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modelo de interação
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum[1-4]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Serviços/API/modelo de dados utilizados
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum[1-4]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusões e melhorias identificadas
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lipsum[1-4]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
