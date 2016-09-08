@@ -1,11 +1,51 @@
 package mei.meiweatherapp.webservice;
 
-/**
- * Created by Hugo on 06-Sep-16.
- */
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import mei.meiweatherapp.contratos.APIData;
+import mei.meiweatherapp.contratos.Praia;
+
+//http://developer.accuweather.com/apis
 public class AccuWeatherWebService extends WebserviceConnector {
-    private final String ENDPOINT = "";
-    private final String METHOD = "";
+    private final String APIKEY = "vplLxDyBIiRtS44dUIX0NiGLNCZFpzW9";
+    private final String ENDPOINT = "http://dataservice.accuweather.com/";
 
+    public AccuWeatherWebService() {
+    }
 
+    public Praia doSearchLocationGeoPosition(Praia praia)
+    {
+        if(praia!=null)
+        {
+            if(praia.getLongitude()!=null && praia.getLatitude()!=null)
+            {
+                String urlGeoLocation = APIData.Accuweather.getGeoPositionURL(praia.getLatitude(), praia.getLongitude(),true);
+                buildWebserviceCallURLString(urlGeoLocation);
+                String dataJson = getWebserviceResponse();
+                if(dataJson!=null)
+                {
+                    try
+                    {
+                        JSONObject jo = new JSONObject(dataJson);
+                        praia.setLocationKey(jo.getString("Key"));
+                        return praia;
+                    }
+                    catch (JSONException e)
+                    {
+                        e.printStackTrace();
+                        return null;
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
 }
