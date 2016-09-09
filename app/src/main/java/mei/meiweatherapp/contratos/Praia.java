@@ -11,6 +11,8 @@ package mei.meiweatherapp.contratos;
     private String morada;
     private int favorita;
 
+    private String locationKey;
+
     //CONSTRUTORES
     public Praia() {
     }
@@ -72,6 +74,14 @@ package mei.meiweatherapp.contratos;
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getLocationKey() {
+        return locationKey;
+    }
+
+    public void setLocationKey(String locationKey) {
+        this.locationKey = locationKey;
     }
 
     @Override

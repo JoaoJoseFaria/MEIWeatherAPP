@@ -31,6 +31,7 @@ public abstract class WebserviceConnector {
   //constroi um URL de chamada a um serviço.
   //usa Uri.Builder (como StringBuilder) para construir um URL com parametros e etc.
   //usa o contrutor new URL (que no fundo recebe uma string e transforma num URL)
+
   protected void buildWebserviceCall(String endpoint, Map<String, String> params){
     Uri.Builder builtUri = Uri.parse(endpoint).buildUpon();
     if(params != null) {
@@ -41,6 +42,16 @@ public abstract class WebserviceConnector {
     }
     try{
       this.webservice_call = new URL(builtUri.build().toString());
+    }
+    catch (MalformedURLException e) {
+      e.printStackTrace();
+    }
+  }
+
+  //constroi URL com base numa string
+  protected void buildWebserviceCallURLString(String url){
+    try{
+      this.webservice_call = new URL(url);
     }
     catch (MalformedURLException e) {
       e.printStackTrace();
