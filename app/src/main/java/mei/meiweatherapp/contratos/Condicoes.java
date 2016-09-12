@@ -1,8 +1,6 @@
 package mei.meiweatherapp.contratos;
 
-/**
- * Created by Hugo on 11-Sep-16.
- */
+//teste
 public class Condicoes {
     private int WeatherIcon;
     private String WeatherText;
