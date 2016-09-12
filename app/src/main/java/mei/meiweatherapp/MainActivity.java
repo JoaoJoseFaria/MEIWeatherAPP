@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,8 @@ import com.google.android.gms.maps.model.LatLng;
 
 import org.w3c.dom.Text;
 
+import mei.meiweatherapp.asynctasks.AccuweatherCurrentConditions;
+import mei.meiweatherapp.contratos.APIData;
 import mei.meiweatherapp.contratos.Praia;
 
 public class MainActivity extends FragmentActivity {
@@ -25,10 +28,20 @@ public class MainActivity extends FragmentActivity {
     TextView txtLong;
     TextView txtAdress;
 
+    ImageView imgTemp;
+    TextView txtTemp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        txtLat = (TextView) findViewById(R.id.txtLat);
+        txtLong = (TextView) findViewById(R.id.txtLong);
+        txtAdress = (TextView) findViewById(R.id.txtAdress);
+        imgTemp = (ImageView) findViewById(R.id.imgTemp);
+        txtTemp = (TextView) findViewById(R.id.txtTemp);
+
+
 
         PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment) getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
 
@@ -46,13 +59,8 @@ public class MainActivity extends FragmentActivity {
                 praia.setLongitude(Double.toString(ll.longitude));
                 praia.setMorada(place.getAddress().toString());
 
-                txtLat = (TextView) findViewById(R.id.txtLat);
-                txtLong = (TextView) findViewById(R.id.txtLong);
-                txtAdress = (TextView) findViewById(R.id.txtAdress);
-
-                txtLat.setText(praia.getLatitude());
-                txtLong.setText(praia.getLongitude());
-                txtAdress.setText(praia.getMorada());
+                AccuweatherCurrentConditions awcc = new AccuweatherCurrentConditions(MainActivity.this, imgTemp, txtAdress, txtLat, txtLong, txtTemp);
+                awcc.execute(praia);
             }
 
             @Override

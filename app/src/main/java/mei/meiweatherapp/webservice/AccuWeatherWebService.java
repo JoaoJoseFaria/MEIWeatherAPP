@@ -32,20 +32,26 @@ public class AccuWeatherWebService extends WebserviceConnector {
                     {
                         JSONObject jo = new JSONObject(dataJson);
                         praia.setLocationKey(jo.getString("Key"));
-                        return praia;
                     }
                     catch (JSONException e)
                     {
                         e.printStackTrace();
-                        return null;
+                        praia = null;
                     }
                 }
                 else
                 {
-                    return null;
+                    praia = null;
                 }
             }
         }
-        return null;
+        return praia;
+    }
+
+    public String getCurrentConditions(Praia praia, Boolean details)
+    {
+        String urlCurrentCondition = APIData.Accuweather.getCurrentConditionURL(praia.getLocationKey(), details);
+        buildWebserviceCallURLString(urlCurrentCondition);
+        return getWebserviceResponse();
     }
 }

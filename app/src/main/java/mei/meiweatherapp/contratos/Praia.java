@@ -1,17 +1,19 @@
 package mei.meiweatherapp.contratos;
 
-/**
- * Created by Hugo on 31-Aug-16.
- */
-    public class Praia {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Praia {
     private int id;
     private String nome;
     private String longitude;
     private String latitude;
     private String morada;
     private int favorita;
-
     private String locationKey;
+
+    private Condicoes condicoesActuais;
+    private List<Condicoes> forecast;
 
     //CONSTRUTORES
     public Praia() {
@@ -24,7 +26,8 @@ package mei.meiweatherapp.contratos;
         this.longitude = longitude;
         this.nome = nome;
         this.morada = morada;
-
+        this.condicoesActuais = new Condicoes();
+        this.forecast = new ArrayList<Condicoes>();
     }
 
     //GET & SET
@@ -82,6 +85,22 @@ package mei.meiweatherapp.contratos;
 
     public void setLocationKey(String locationKey) {
         this.locationKey = locationKey;
+    }
+
+    public Condicoes getCondicoesActuais() {
+        return condicoesActuais;
+    }
+
+    public void setCondicoesActuais(Condicoes condicoesActuais) {
+        this.condicoesActuais = condicoesActuais;
+    }
+
+    public List<Condicoes> getForecast() {
+        return forecast;
+    }
+
+    public void setForecast(List<Condicoes> forecast) {
+        this.forecast = forecast;
     }
 
     @Override
