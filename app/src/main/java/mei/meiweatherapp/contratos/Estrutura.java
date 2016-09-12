@@ -1,6 +1,6 @@
 package mei.meiweatherapp.contratos;
 
-//Estrutura
+//Estruturas
 public class Estrutura {
     public static final String NAME = "praias.db";
     public static final int VERSAO = 1;
